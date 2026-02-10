@@ -31,7 +31,16 @@ def add_member(names, ranks, divs, ids):
     print("New member added!")
 
 def remove_member(names, ranks, divs, ids):
-    print("Placeholder")
+    rem_id = input("Enter ID of member to remove: ")
+    if rem_id in ids:
+        idx = ids.index(rem_id)
+        names.pop(idx)
+        ranks.pop(idx)
+        divs.pop(idx)
+        ids.pop(idx)
+        print("Removed crew member with ID:", rem_id)
+    else:
+        print("ERROR: ID not found.")
     
 def update_rank(names, ranks, ids):
     print("Placeholder")
