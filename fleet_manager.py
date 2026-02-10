@@ -41,9 +41,18 @@ def remove_member(names, ranks, divs, ids):
         print("Removed crew member with ID:", rem_id)
     else:
         print("ERROR: ID not found.")
-    
+
 def update_rank(names, ranks, ids):
-    print("Placeholder")
+    id_rank = input("Enter ID of person whos rank you want to change: ")
+    if id_rank not in ids:
+        print("ID NOT FOUND!")
+        return
+    idx = ids.index(id_rank)
+    print("Name : ", names[idx], "  Current Rank : ", ranks[idx])
+
+    new_rank = input("Enter new rank : ")
+    ranks[idx] = new_rank
+    print("Rank Updated.")
 
 def display_roster(names, ranks, divs, ids):
     if len(names) == 0:
