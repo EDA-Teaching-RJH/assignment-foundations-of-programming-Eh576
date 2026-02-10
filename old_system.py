@@ -29,7 +29,7 @@ def run_system_monolith():
         if opt == "1":  ## Use == not = syntax error
             print("Current Crew List:")
             
-            for i in range(10):
+            for i in range(len(n)): ## List only had 4 items not 10 but now i referenced the list so i wont need to keep changing the number when edited
                 print(n[i] + " - " + r[i]) 
                 
         elif opt == "2":
