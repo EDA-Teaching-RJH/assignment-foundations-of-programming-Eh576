@@ -62,7 +62,7 @@ def run_system_monolith():
             for rank in r:
                 if rank == "Captain" or "Commander": 
                     count = count + 1
-            print("High ranking officers: " + str(count)) 
+            print("High ranking officers: " + str(count)) ## Needs to be String not Int
             
         elif opt == "5":
             print("Shutting down.")
@@ -81,7 +81,7 @@ def run_system_monolith():
        
         if len(n) > 0:
             print("Database has entries.")
-        if len(n) == 0:
+        else: ## no need for double if statements 
             print("Database empty.")
 
         
