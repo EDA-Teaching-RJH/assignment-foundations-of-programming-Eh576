@@ -2,7 +2,7 @@ def init_database():
     names = ["Edon", "James", "Joseph", "Turk", "Levi"]
     ranks = ["Captain", "Commander", "Lieutenant", "Captain", "Lt. Commander"]
     divs = ["Command", "Operations", "Security", "Operations", "Command"]
-    ids = ["6701, 6702, 6703, 6704, 6705"] ## Sorry about 67 !!!
+    ids = ["6701", "6702", "6703", "6704", "6705"] ## Sorry about 67 !!!
     return names, ranks, divs, ids
 
 def display_menu(user):
@@ -37,7 +37,13 @@ def update_rank(names, ranks, ids):
     print("Placeholder")
 
 def display_roster(names, ranks, divs, ids):
-    print("Placeholder")
+    if len(names) == 0:
+        print("No crew in database.")
+        return
+    else:
+        print("Roster List:")
+        for i in range(len(names)): 
+            print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i] ) 
 
 def search_crew(names, ranks, divs, ids):
     print("Placeholder")
