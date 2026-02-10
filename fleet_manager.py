@@ -20,7 +20,15 @@ def display_menu(user):
 
 
 def add_member(names, ranks, divs, ids):
-    print("Placeholder")
+    new_name = input("Full name : ")
+    new_rank = input("Rank : ")
+    new_div  = input("Division : ")
+    new_id   = input("Unique ID : ")
+    names.append(new_name)
+    ranks.append(new_rank)
+    divs.append(new_div)
+    ids.append(new_id)
+    print("New member added!")
 
 def remove_member(names, ranks, divs, ids):
     print("Placeholder")
