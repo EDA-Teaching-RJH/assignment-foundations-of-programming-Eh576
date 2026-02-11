@@ -64,7 +64,14 @@ def display_roster(names, ranks, divs, ids):
             print(names[i] + " - " + ranks[i] + " - " + divs[i] + " - " + ids[i] ) 
 
 def search_crew(names, ranks, divs, ids):
-    print("Placeholder")
+    search = input("Enter name of person you want to search for: ")
+    found = False
+    for i in range(len(names)):
+        if search in names[i]:
+            print(ids[i], "-", names[i], "-", ranks[i], "-", divs[i])
+            found = True
+    if not found:
+        print("No matches found.")
 
 def filter_by_division(names, divs):
     print("Placeholder")
