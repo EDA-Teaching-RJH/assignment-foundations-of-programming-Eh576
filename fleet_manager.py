@@ -77,7 +77,20 @@ def filter_by_division(names, divs):
     print("Placeholder")
 
 def calculate_payroll(ranks):
-    print("Placeholder")
+    total = 0
+    for rank in ranks:
+        if rank == "Captain":
+            total += 6700
+        elif rank == "Commander":
+            total += 4670 
+        elif rank == "Lt. Commander":
+            total += 3670
+        elif rank == "Lieutenant":
+            total += 2670
+        else:
+            total += 0
+    return total 
+
 
 def count_officers(ranks):
     print("Placeholder")
