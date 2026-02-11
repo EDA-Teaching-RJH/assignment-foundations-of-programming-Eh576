@@ -1,6 +1,6 @@
 def init_database(): 
     names = ["Edon", "James", "Joseph", "Turk", "Levi"]
-    ranks = ["Captain", "Commander", "Lieutenant", "Captain", "Lt. Commander"]
+    ranks = ["Captain", "Commander", "Lieutenant", "Ensign", "Lt. Commander"]
     divs = ["Command", "Operations", "Security", "Operations", "Command"]
     ids = ["6701", "6702", "6703", "6704", "6705"] ## Sorry about 67 !!!
     return names, ranks, divs, ids
@@ -87,15 +87,18 @@ def calculate_payroll(ranks):
             total += 3670
         elif rank == "Lieutenant":
             total += 2670
+        elif rank == "Ensign":
+            total += 670
         else:
             total += 0
     return total 
 
-
 def count_officers(ranks):
-    print("Placeholder")
-
-
+    Count = 0 
+    for rank in ranks: 
+        if rank == "Captain" or rank == "Commander":
+            Count += 1
+    return Count 
 
 def main():
     names, ranks, divs, ids = init_database() 
